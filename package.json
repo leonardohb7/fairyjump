@@ -1,0 +1,30 @@
+{
+  "name": "fairyjump",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardohb7/fairyjump.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/leonardohb7/fairyjump/issues"
+  },
+  "homepage": "https://github.com/leonardohb7/fairyjump#readme",
+  "dependencies": {
+    "three": "^0.186.1",
+    "three-mesh-bvh": "^0.9.15"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  },
+  "private": true
+}

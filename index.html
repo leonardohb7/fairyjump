@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fairy Jump</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="hud">
+      <div id="wind"></div>
+      <div id="crosshair"></div>
+      <div id="stats">
+        <div class="stat"><span class="label">Altura</span><span id="height">0.0 m</span></div>
+        <div class="stat"><span class="label">Recorde</span><span id="best">0.0 m</span></div>
+        <div class="stat"><span class="label">Tempo</span><span id="timer">00:00.00</span></div>
+        <div class="stat"><span id="chapter"></span></div>
+        <div id="effect" hidden>
+          <span id="effect-label"></span>
+          <div class="bar"><div id="effect-fill"></div></div>
+        </div>
+      </div>
+      <div id="tower">
+        <div class="rail"></div>
+        <div id="tower-ticks"></div>
+        <div id="tower-best" title="Recorde"></div>
+        <div id="tower-me" title="Você"></div>
+      </div>
+      <div id="toast"></div>
+      <div id="win" hidden>
+        <h2>Felizes para sempre!</h2>
+        <div class="win-stats">
+          <div><span>Tempo</span><b id="win-time"></b></div>
+          <div><span>Quedas</span><b id="win-falls"></b></div>
+          <div><span>Maior queda</span><b id="win-fall"></b></div>
+        </div>
+        <p><kbd>R</kbd> para escalar de novo</p>
+      </div>
+      <pre id="debug" hidden></pre>
+    </div>
+
+    <div id="overlay">
+      <div class="panel">
+        <h1>Fairy Jump</h1>
+        <p class="subtitle" id="overlay-subtitle">Oito contos, 420 metros. Suba até a estrela. Não caia.</p>
+        <button id="play">Clique para jogar</button>
+        <div class="controls">
+          <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> mover &nbsp; <kbd>Shift</kbd> correr</div>
+          <div><kbd>Espaço</kbd> pular (segure para ir mais alto)</div>
+          <div>Pule contra uma borda para <b>se agarrar e escalar</b></div>
+          <div>Procure a <b>Sininho</b>, a garrafa <b>Beba-me</b> e o bolo <b>Coma-me</b></div>
+          <div><kbd>R</kbd> recomeçar &nbsp; <kbd>F</kbd>/<kbd>T</kbd> salvar/voltar ponto (treino)</div>
+          <div><kbd>F3</kbd> debug &nbsp; <kbd>Esc</kbd> pausar</div>
+        </div>
+        <div class="settings">
+          <label>Sensibilidade <input id="sens" type="range" min="0.1" max="3" step="0.05" /><output id="sens-out"></output></label>
+          <label>Campo de visão <input id="fov" type="range" min="70" max="110" step="1" /><output id="fov-out"></output></label>
+          <label class="check"><input id="bob" type="checkbox" /> Balanço da câmera</label>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
